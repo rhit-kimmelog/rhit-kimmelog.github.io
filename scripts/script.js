@@ -7,14 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // https://befused.com/javascript/get-filename-url/
     let name = window.location.pathname.substring(window.location.pathname.lastIndexOf('/')+1);
 
-    nav = document.getElementById("navbar");
-
-    if (name == "index.html") {
-        nav.innerHTML = navbar;
-    }
+    document.getElementById("navbar").innerHTML = navbar;
 
     if (name == "resume.html") {
-        nav.innerHTML = navbar;
         document.getElementById("main").classList.remove("selected")
 
         document.getElementById("resume").classList.add("selected")
@@ -22,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     if (name == "portfolio.html") {
-        nav.innerHTML = navbar;
         document.getElementById("main").classList.remove("selected")
 
         document.getElementById("portfolio").classList.add("selected")
